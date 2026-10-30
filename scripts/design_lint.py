@@ -10,14 +10,15 @@ design_lint.py — 只量事实的设计体检，外加「外观指纹」：三�
   指纹  底色、主色板、字体、版式骨架——给 compare 和 ledger 用
 
 用法：
-  python3 scripts/design_lint.py check a.html [b.html …] [--min-body 14] [--viewport 1440x900] [--json]
-  python3 scripts/design_lint.py compare dir-1.html dir-2.html dir-3.html     三方向是不是换皮
-  python3 scripts/design_lint.py ledger [--last 8]                           最近交付过的样子
-  python3 scripts/design_lint.py ledger add final.html --project 名字 [--note "…"]
-  python3 scripts/design_lint.py ledger check dir-1.html dir-2.html …        新方向和最近的项目撞没撞
+  ~/py-tools/bin/python scripts/design_lint.py check a.html [b.html …] [--min-body 14] [--viewport 1440x900] [--json]
+  ~/py-tools/bin/python scripts/design_lint.py compare dir-1.html dir-2.html dir-3.html     三方向是不是换皮
+  ~/py-tools/bin/python scripts/design_lint.py ledger [--last 8]                           最近交付过的样子
+  ~/py-tools/bin/python scripts/design_lint.py ledger add final.html --project 名字 [--note "…"]
+  ~/py-tools/bin/python scripts/design_lint.py ledger check dir-1.html dir-2.html …        新方向和最近的项目撞没撞
 
 外观账本存在 ~/.huashu-design/ledger.jsonl（HUASHU_DESIGN_HOME 可改），只在本机，不随 skill 分发。
-依赖：pip install playwright pillow && playwright install chromium
+依赖：uv pip install --python ~/py-tools/bin/python playwright pillow
+      ~/py-tools/bin/python -m playwright install chromium
 """
 
 import argparse
@@ -247,7 +248,9 @@ def collect(paths, viewport=(1440, 900), min_body=14, min_label=12):
     try:
         from playwright.sync_api import sync_playwright
     except ImportError:
-        print('体检跳过：没装 Python 版 playwright。装上后再跑：pip install playwright pillow && playwright install chromium',
+        print('体检跳过：没装 Python 版 playwright。装上后再跑：'
+              'uv pip install --python ~/py-tools/bin/python playwright pillow && '
+              '~/py-tools/bin/python -m playwright install chromium',
               file=sys.stderr)
         sys.exit(0)
     results = []

@@ -25,7 +25,7 @@
 
 ```bash
 # $HD = 本 skill 的根目录（SKILL.md 所在目录），不是用户的项目目录
-python3 "$HD/scripts/design_lint.py" check info.html --viewport 1080x1350 --min-body 36 --min-label 28
+~/py-tools/bin/python "$HD/scripts/design_lint.py" check info.html --viewport 1080x1350 --min-body 36 --min-label 28
 ```
 
 图内最小字号按最终显示尺寸算：1080 宽的长图在手机上大约缩到 390pt 宽（约 2.8 倍），所以画布上正文 ≥36px、标签 ≥28px，到手机屏上才有 13–14pt。打印或大屏按实际观看距离另算。

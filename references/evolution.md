@@ -19,7 +19,7 @@
 ```bash
 # $HD = 本 skill 的根目录（SKILL.md 所在目录），不是用户的项目目录
 python3 "$HD/scripts/learn.py" <主题词…>        # 偏好全部带出 + 和主题相关的经验
-python3 "$HD/scripts/design_lint.py" ledger      # 最近 8 个交付的样子，以及反复出现的那几样
+~/py-tools/bin/python "$HD/scripts/design_lint.py" ledger      # 最近 8 个交付的样子，以及反复出现的那几样
 ```
 
 它们不阻塞：没有记录就继续。它们也不是规则：眼前的项目和条目冲突时以项目为准，然后去改条目。
@@ -29,7 +29,7 @@ python3 "$HD/scripts/design_lint.py" ledger      # 最近 8 个交付的样子�
 **收工后**（用户认可交付，或不再给意见时）：
 
 ```bash
-python3 "$HD/scripts/design_lint.py" ledger add <最终交付文件> --project <名字>
+~/py-tools/bin/python "$HD/scripts/design_lint.py" ledger add <最终交付文件> --project <名字>
 python3 "$HD/scripts/learn.py" harvest <项目目录>     # 列出项目里能当证据的东西＋该不该记的判据
 ```
 

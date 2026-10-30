@@ -56,7 +56,7 @@ metadata:
 
 ```bash
 python3 "$HD/scripts/learn.py" <主题词…>        # 这个用户的偏好（原话）＋过去项目的教训
-python3 "$HD/scripts/design_lint.py" ledger      # 最近交付过的样子：反复出现的那几样，这次主动避开
+~/py-tools/bin/python "$HD/scripts/design_lint.py" ledger      # 最近交付过的样子：反复出现的那几样，这次主动避开
 python3 "$HD/scripts/capabilities.py"            # 手里有什么：决定素材走哪一档
 ```
 
@@ -162,8 +162,8 @@ T0 档人人都有（真图库、SVG/canvas/Three.js 程序化材质、数据即
 ## 收工三件事
 
 ```bash
-python3 "$HD/scripts/design_lint.py" check <交付文件>                       # 红灯必修；黄灯（模板装饰）删掉
-python3 "$HD/scripts/design_lint.py" ledger add <最终文件> --project <名字>   # 记外观账，下个项目才知道要避开什么
+~/py-tools/bin/python "$HD/scripts/design_lint.py" check <交付文件>                       # 红灯必修；黄灯（模板装饰）删掉
+~/py-tools/bin/python "$HD/scripts/design_lint.py" ledger add <最终文件> --project <名字>   # 记外观账，下个项目才知道要避开什么
 python3 "$HD/scripts/learn.py" harvest <项目目录>                            # 这次有什么值得记
 ```
 

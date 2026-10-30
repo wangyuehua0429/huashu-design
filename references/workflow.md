@@ -18,7 +18,7 @@
 4. **建文件夹**：`项目名/` 下放主 HTML 和需要的素材（不要整批复制 >20 个文件）。
 5. **对齐 pass**：HTML 开头写 assumptions＋占位＋推理注释。🛑 尽早给用户看（哪怕只是灰色方块加标签），等反馈再写组件。
 6. **Full pass**：填占位、做变体、加 Tweaks。做到一半再给用户看一次。
-7. **验证**：Playwright 截图、查控制台报错、`python3 "$HD/scripts/design_lint.py" check`（红灯必修）。🛑 交付前自己肉眼过一遍浏览器——AI 写的交互经常有 bug。
+7. **验证**：Playwright 截图、查控制台报错、`~/py-tools/bin/python "$HD/scripts/design_lint.py" check`（红灯必修）。🛑 交付前自己肉眼过一遍浏览器——AI 写的交互经常有 bug。
 8. **交付与回流**：总结只说 caveats 和下一步；`design_lint.py ledger add` 记外观账；`learn.py harvest` 看有什么值得记（`references/evolution.md`）。
 
 **检查点原则**：碰到 🛑 就停，说清「我做了 X，下一步打算 Y，你确认吗？」然后真的等。「继续」授权的是进入下一步，不是跳过这一步里的 gate。

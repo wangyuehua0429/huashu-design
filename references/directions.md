@@ -43,7 +43,7 @@
 ```bash
 # $HD = 本 skill 的根目录（SKILL.md 所在目录），不是用户的项目目录
 python3 "$HD/scripts/learn.py" direction color <题材关键词>   # 这个用户的偏好＋过去的教训
-python3 "$HD/scripts/design_lint.py" ledger                     # 最近交付过的样子和用过的参照：这次不再用
+~/py-tools/bin/python "$HD/scripts/design_lint.py" ledger                     # 最近交付过的样子和用过的参照：这次不再用
 ```
 
 再用看图能力打开风格总览：`$HD/assets/style-specimens/sheet-<分区>.jpg`（分区：web / ppt / info / app，外加跨媒介的 east 中文与东亚）。一张图里是这个分区全部风格的样张，先知道每个风格做到位是什么样。
@@ -106,10 +106,10 @@ python3 "$HD/scripts/design_lint.py" ledger                     # 最近交付�
 三版都做完后跑：
 
 ```bash
-python3 "$HD/scripts/design_lint.py" check design-demos/dir-*.html       # 红灯必修；黄灯是顺手的模板装饰，删掉；外观家族只是提示
-python3 "$HD/scripts/design_lint.py" compare design-demos/dir-*.html     # 两版撞了 → 换成备选里的另一张，或换骨架，不是换颜色
+~/py-tools/bin/python "$HD/scripts/design_lint.py" check design-demos/dir-*.html       # 红灯必修；黄灯是顺手的模板装饰，删掉；外观家族只是提示
+~/py-tools/bin/python "$HD/scripts/design_lint.py" compare design-demos/dir-*.html     # 两版撞了 → 换成备选里的另一张，或换骨架，不是换颜色
 #   品牌约束了颜色字体加 --brand；App 原型多台手机并排加 --ignore-layout；deck 加 --viewport 1920x1080 --min-body 24 --min-label 16
-python3 "$HD/scripts/design_lint.py" ledger check design-demos/dir-*.html # 和最近项目撞了 → 换成备选里的另一张
+~/py-tools/bin/python "$HD/scripts/design_lint.py" ledger check design-demos/dir-*.html # 和最近项目撞了 → 换成备选里的另一张
 ```
 
 完整版命名 `design-demos/dir-1.html` 到 `dir-3.html`，确认真有 3 个再往下。黄灯删掉那个结构就好，换个符号躲过检测不算改；外观家族不用改，它只在三版挤在一起、或撞了账本时才有意义。没装 Python 版 playwright 时脚本会跳过并提示安装，这时用截图肉眼对照三版，并把这件事写进交付说明。

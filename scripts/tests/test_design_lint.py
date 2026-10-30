@@ -1,6 +1,6 @@
 """design_lint.py 与 learn.py 的测试：检查工具必须能抓住故意做坏的输入，也不能冤枉干净的。
 
-运行：python3 -m unittest scripts/tests/test_design_lint.py -v
+运行：~/py-tools/bin/python -m unittest scripts/tests/test_design_lint.py -v
 """
 
 import os
