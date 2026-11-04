@@ -121,6 +121,8 @@ A map of every travel photo from three years, in a Kaoru Kasai–style long scro
 npx skills add alchaincyf/huashu-design
 ```
 
+**DeepSeek Harness**: this repo is also a DSH plugin. `dsh plugin --profile desktop add github:alchaincyf/huashu-design` (use `web` for the web app), then restart DSH. Remove with `dsh plugin --profile desktop remove huashu-design`.
+
 > **Verify after install**: this skill is more than a single SKILL.md — the `references/`, `assets/`, `scripts/`, and `demos/` subdirectories hold 99 referenced recipes, scripts, and assets that the skill depends on. After installing, check the install path (e.g. `~/.claude/skills/huashu-design/`); if you only see SKILL.md and none of those subdirectories, your `skills` CLI is too old (≤1.5.15 had a bug that synced only the single file, fixed in 1.5.19). Upgrade and reinstall:
 >
 > ```bash
@@ -303,7 +305,7 @@ The highest-priority rule, added after a real failure mode: when the task mentio
 
 Avoid the visual common denominator of AI output: purple gradients, emoji icons, rounded-corner + left border accent, SVG humans, Inter-as-display, **CSS silhouettes standing in for real product shots**, and the 2026 generation of template chrome (an uppercase eyebrow over every heading, "A · B · C" dot chains, trailing "→", one recolored word per headline). No invented data, testimonials or logo walls.
 
-"Look families" like warm paper + serif or dark + one accent are not banned: the versions users approved in blind tests included both. What to avoid is all three directions crowding into one family, or every project looking the same — that's the look ledger's job.
+“Look families” like warm paper + serif or dark + one accent are not banned: the versions users approved in blind tests included both. What to avoid is all three directions crowding into one family, or every project looking the same — that's the look ledger's job.
 
 ---
 
@@ -430,7 +432,7 @@ Huasheng is an AI-native coder, independent developer, and AI content creator. N
 | Platform | Handle | Link |
 |---|---|---|
 | X / Twitter | @AlchainHust | https://x.com/AlchainHust |
-| WeChat Official Account | 花叔 | Search "花叔" in WeChat |
+| WeChat Official Account | 花叔 | Search “花叔” in WeChat |
 | Bilibili | 花叔 | https://space.bilibili.com/14097567 |
 | YouTube | 花叔 | https://www.youtube.com/@Alchain |
 | Xiaohongshu | 花叔 | https://www.xiaohongshu.com/user/profile/5abc6f17e8ac2b109179dfdf |

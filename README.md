@@ -143,7 +143,17 @@ npx skills add alchaincyf/huashu-design
 > git clone https://github.com/alchaincyf/huashu-design.git ~/.claude/skills/huashu-design
 > ```
 
-然后在 Claude Code / Codex / Cursor 等任意支持 skills 的 agent 里直接说话：
+### DeepSeek Harness 插件
+
+本仓库同时是一个 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）插件。桌面端用户在「插件 → 添加插件」里填 GitHub 仓库地址，或者用命令行（桌面端的 profile 叫 `desktop`，网页版换成 `web`）：
+
+```bash
+dsh plugin --profile desktop add github:alchaincyf/huashu-design
+```
+
+命令行装之前，桌面端要先打开过一次，并且完全退出。装完再打开 DSH，插件才会加载。实测桌面端会直接用它自带的 Python 生成可编辑 PPTX；要导出 PDF 时，脚本会借用你电脑上已装的 Chrome 或 Edge。卸载：`dsh plugin --profile desktop remove huashu-design`。
+
+然后在 Claude Code / Codex / Cursor / DeepSeek Harness 等任意支持 skills 的 agent 里直接说话：
 
 ```
 「做一份 AI 心理学的演讲 PPT，推荐 3 个风格方向让我选」
@@ -451,7 +461,7 @@ Anthropic 发布 Claude Design 那天我玩到凌晨四点。几天之后发现�
 
 ## License
 
-**2026-05-14 起改为 MIT 协议。** 此前版本采用「个人使用免费、企业商用需授权」的 Personal Use License，对商用做了限制——现在这层限制完全解除。
+**2026-05-14 起改为 MIT 协议。** 此前版本采用“个人使用免费、企业商用需授权”的 Personal Use License，对商用做了限制——现在这层限制完全解除。
 
 按 [MIT License](LICENSE)，你可以**自由使用、修改、分发**本 skill，**包括商业用途**——公司内部用、客户商单交付、做成付费产品对外卖，都没问题。无需事先授权、无需付费、无需打招呼。注明出处不强制，但欢迎。
 
@@ -466,7 +476,7 @@ Anthropic 发布 Claude Design 那天我玩到凌晨四点。几天之后发现�
 | 平台 | 账号 | 链接 |
 |---|---|---|
 | X / Twitter | @AlchainHust | https://x.com/AlchainHust |
-| 公众号 | 花叔 | 微信搜索「花叔」 |
+| 公众号 | 花叔 | 微信搜索“花叔” |
 | B 站 | 花叔 | https://space.bilibili.com/14097567 |
 | YouTube | 花叔 | https://www.youtube.com/@Alchain |
 | 小红书 | 花叔 | https://www.xiaohongshu.com/user/profile/5abc6f17e8ac2b109179dfdf |
